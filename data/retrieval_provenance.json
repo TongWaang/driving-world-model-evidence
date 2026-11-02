@@ -1,0 +1,29 @@
+{
+  "created": "2026-11-02",
+  "design": "Reconstruction from the supplied Revision 4 seed list plus targeted primary-source retrieval",
+  "historical_search_log_available": false,
+  "database_wide_screening_counts": null,
+  "selection": "The 17 systems named in the manuscript are retained. This package does not silently expand the manuscript corpus.",
+  "operations": [
+    "Read the supplied manuscript and recover its study IDs, task distinctions and four contrasts.",
+    "Retrieve exact-title primary-source records, linked arXiv manuscripts and official proceedings.",
+    "Inspect method/action interfaces and endpoint-specific experimental sections; freeze versions in sources.json.",
+    "Split source-task/input variants without counting variants as independent studies.",
+    "Transcribe four within-study contrasts with explicit source cells and experimental boundaries.",
+    "Generate S1 from the JSON register and execute deterministic arithmetic and boundary-case checks."
+  ],
+  "query_families": [
+    "Exact system/paper title + official proceedings or site:arxiv.org",
+    "Exact title + planning / action history / frozen encoder",
+    "Within-source terms: future ego poses, actor behavior, validity mask, selector, Table 3, Table 4, Table 11"
+  ],
+  "exclusions": "General robotics, static perception and datasets are context rather than core systems; ACT-Bench and WorldLens are comparators.",
+  "scope_note": "This log describes present reconstruction work. It does not recreate an unobserved historical search or claim systematic coverage.",
+  "access_note": "Some CVF direct PDF requests returned 403. Linked arXiv full texts were used with explicit versions; numerical official tables were also checked during this chat.",
+  "limitations": [
+    "Single AI-assisted extraction; no independent second coder.",
+    "No new neural-model training, driving rollouts or road trials.",
+    "Missing experimental-quality fields mean not extracted, not absent in the source.",
+    "D/P/X/NR codes are interpretations of specified claims, not author-independent certifications."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "axes": {
+    "R": "Predicted representation or decoded observation",
+    "A": "External action conditions and ego outputs; record future information separately",
+    "I": "Mechanism producing other-agent response, not proof of response validity",
+    "U": "Stage at which prediction is used",
+    "V": "Reference and feedback process actually tested"
+  },
+  "evidence_status": {
+    "D": "Direct test of the specified endpoint; not a quality score",
+    "P": "Proxy, selected qualitative evidence, or indirect association for the specified claim",
+    "X": "The inspected test addresses a different endpoint; not proof of incapability",
+    "NR": "Unresolved in the inspected material; not a negative result"
+  },
+  "reference_types": [
+    "logged",
+    "qualitative",
+    "reactive_simulation",
+    "nonreactive_simulation",
+    "sensor_reference",
+    "hybrid_execution",
+    "behavior_rollout"
+  ],
+  "missing_value_rule": "null means not extracted, not zero and not necessarily absent from the source",
+  "aggregation_rule": "Do not treat task records as independent studies or estimate field-wide prevalence",
+  "coder_rule": "Single AI-assisted reconstruction; no independent second-coder agreement is claimed"
+}

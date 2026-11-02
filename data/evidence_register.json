@@ -1,0 +1,1374 @@
+{
+  "schema_version": "1.0",
+  "created": "2026-11-02",
+  "associated_manuscript": "A Critical Review of Evaluation Evidence for Autonomous Driving World Models",
+  "source_manuscript_sha256": "5eb0cc7b45ddcc573a5993d6cb6a5c90921fd80a6990d80c30e0729aca83d155",
+  "construction_status": "Reconstructed supplement; not an original historical extraction log",
+  "records": [
+    {
+      "record_id": "S01-T01",
+      "study_id": "S01",
+      "task_variant": "Conditional video generation",
+      "R": "video",
+      "A": "structured scene and driving-action conditions",
+      "I": "generated observations",
+      "U": "generation",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Conditional video quality",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Conditional video quality",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Independent physical action-outcome ordering",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections 3, 4.2",
+      "interpretation_boundary": "Image agreement does not label executed alternatives.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S01-T02",
+      "study_id": "S01",
+      "task_variant": "Action prediction head",
+      "R": "latent features and ego actions",
+      "A": "past actions; future actions output",
+      "I": "no responsive execution in this test",
+      "U": "deployment",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Logged planning accuracy",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Logged planning accuracy",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Reactive policy execution from this logged test",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Section 4.3; Figure 3",
+      "interpretation_boundary": "Planning head combines action history and visual features.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S02-T01",
+      "study_id": "S02",
+      "task_variant": "Tree-based candidate planning",
+      "R": "multiview video",
+      "A": "supplied ego trajectory candidates",
+      "I": "generated candidate futures",
+      "U": "online_selection",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Logged candidate-selection planning",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Logged candidate-selection planning",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Independently realized candidate-outcome ranking",
+          "origin": "reviewer_added_use_question",
+          "status": "P"
+        }
+      ],
+      "source_locators": "Sections 4.1-4.2, 5.4",
+      "interpretation_boundary": "Image-based reward supports selection; independent cost labels remain distinct.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S02-T02",
+      "study_id": "S02",
+      "task_variant": "Counterfactual and deviation examples",
+      "R": "multiview video",
+      "A": "edited ego trajectories and scene conditions",
+      "I": "generated alternative futures",
+      "U": "generation",
+      "V": "qualitative",
+      "reference_environment": "edited recorded scenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Selected counterfactual examples",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Selected counterfactual examples",
+          "origin": "source_reported_endpoint",
+          "status": "P"
+        },
+        {
+          "claim": "Physical response distribution calibration",
+          "origin": "reviewer_added_use_question",
+          "status": "P"
+        }
+      ],
+      "source_locators": "Sections 5.4-5.5; Appendix A.4",
+      "interpretation_boundary": "Selected examples are proxy evidence for physical response.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S03-T01",
+      "study_id": "S03",
+      "task_variant": "Action-conditioned future generation",
+      "R": "video",
+      "A": "command, goal, trajectory, steering or speed",
+      "I": "generated observations",
+      "U": "generation",
+      "V": "logged",
+      "reference_environment": "recorded driving datasets",
+      "information_conditions": null,
+      "source_reported_endpoint": "Forecast and control-adherence diagnostics",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Forecast and control-adherence diagnostics",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Response calibration under ego intervention",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections 3.2, 4.1-4.2",
+      "interpretation_boundary": "Different control modalities define different conditional tasks.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S03-T02",
+      "study_id": "S03",
+      "task_variant": "Reward on perturbed trajectories",
+      "R": "video-derived reward",
+      "A": "jittered recorded trajectories",
+      "I": "model-generated futures",
+      "U": "action_scoring",
+      "V": "logged",
+      "reference_environment": "Waymo; perturbation experiment",
+      "information_conditions": null,
+      "source_reported_endpoint": "Reward association with trajectory perturbations",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Reward association with trajectory perturbations",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Independent hazardous-outcome ranking",
+          "origin": "reviewer_added_use_question",
+          "status": "P"
+        }
+      ],
+      "source_locators": "Sections 3.3, 4.3; Appendix C.6",
+      "interpretation_boundary": "Perturbations do not independently execute every alternative.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S04-T01",
+      "study_id": "S04",
+      "task_variant": "Trajectory-conditioned forecast adaptation",
+      "R": "video",
+      "A": "supplied future trajectory",
+      "I": "generated observations",
+      "U": "generation",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Conditional future prediction",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Conditional future prediction",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Independent reaction-probability calibration",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Section 3.3; Appendix D.1.2",
+      "interpretation_boundary": "The trajectory is a condition.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S04-T02",
+      "study_id": "S04",
+      "task_variant": "Frozen-encoder motion planner",
+      "R": "latent scene features",
+      "A": "history and command; future waypoints output",
+      "I": "planning head without candidate rollout search",
+      "U": "representation_transfer",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Frozen-encoder planning transfer",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Frozen-encoder planning transfer",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Inference-time candidate search in this adaptation",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Section 3.3; Table 5; Appendix D.1.3",
+      "interpretation_boundary": "A frozen encoder and MLP implement the planning adaptation.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S05-T01",
+      "study_id": "S05",
+      "task_variant": "Oracle occupancy",
+      "R": "3D occupancy and ego motion",
+      "A": "ego trajectory jointly output",
+      "I": "joint predicted scene and ego evolution",
+      "U": "forecast_and_planning",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": "Ground-truth 3D occupancy input",
+      "source_reported_endpoint": "Logged occupancy forecasting and planning",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Logged occupancy forecasting and planning",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "External ego-intervention validity",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Tables 1-2",
+      "interpretation_boundary": "Joint ego output is not an externally supplied intervention.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S05-T02",
+      "study_id": "S05",
+      "task_variant": "Camera OccWorld-D",
+      "R": "3D occupancy and ego motion",
+      "A": "ego trajectory jointly output",
+      "I": "joint predicted scene and ego evolution",
+      "U": "forecast_and_planning",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": "Camera input with 3D-occupancy supervision",
+      "source_reported_endpoint": "Logged occupancy forecasting and planning",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Logged occupancy forecasting and planning",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "External ego-intervention validity",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Tables 1-2",
+      "interpretation_boundary": "Joint ego output is not an externally supplied intervention.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S05-T03",
+      "study_id": "S05",
+      "task_variant": "Camera OccWorld-T",
+      "R": "3D occupancy and ego motion",
+      "A": "ego trajectory jointly output",
+      "I": "joint predicted scene and ego evolution",
+      "U": "forecast_and_planning",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": "Camera input with semantic-LiDAR supervision",
+      "source_reported_endpoint": "Logged occupancy forecasting and planning",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Logged occupancy forecasting and planning",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "External ego-intervention validity",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Tables 1-2",
+      "interpretation_boundary": "Joint ego output is not an externally supplied intervention.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S05-T04",
+      "study_id": "S05",
+      "task_variant": "Camera OccWorld-S",
+      "R": "3D occupancy and ego motion",
+      "A": "ego trajectory jointly output",
+      "I": "joint predicted scene and ego evolution",
+      "U": "forecast_and_planning",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": "Camera input without additional scene supervision",
+      "source_reported_endpoint": "Logged occupancy forecasting and planning",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Logged occupancy forecasting and planning",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "External ego-intervention validity",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Tables 1-2",
+      "interpretation_boundary": "Joint ego output is not an externally supplied intervention.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S05-T05",
+      "study_id": "S05",
+      "task_variant": "Tokenizer resolution ablation",
+      "R": "3D occupancy",
+      "A": "joint ego output; tokenizer varied",
+      "I": "joint predicted scene and ego evolution",
+      "U": "ablation",
+      "V": "logged",
+      "reference_environment": "nuScenes; OccWorld-O",
+      "information_conditions": "Oracle occupancy; 50x50 versus 100x100 tokenizer",
+      "source_reported_endpoint": "Reconstruction, forecasting and planning contrast",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Reconstruction, forecasting and planning contrast",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Universal reconstruction-to-driving conversion",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Table 3, PDF page 13",
+      "interpretation_boundary": "Tokenizer resolution and computational burden change.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S06-T01",
+      "study_id": "S06",
+      "task_variant": "Future-pose-conditioned point-cloud forecast",
+      "R": "point clouds",
+      "A": "supplied future ego poses",
+      "I": "learned conditional scene evolution",
+      "U": "forecast",
+      "V": "logged",
+      "reference_environment": "nuScenes, KITTI Odometry, Argoverse2",
+      "information_conditions": "Past point clouds and future ego poses",
+      "source_reported_endpoint": "Conditional point-cloud prediction",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Conditional point-cloud prediction",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Unconditioned ego-action prediction",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Section 5; Appendix A.2.2",
+      "interpretation_boundary": "Future ego poses are supplied evaluation inputs.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S06-T02",
+      "study_id": "S06",
+      "task_variant": "Edited-action response visualization",
+      "R": "point clouds",
+      "A": "edited future ego trajectories",
+      "I": "generated surrounding-agent motion",
+      "U": "generation",
+      "V": "qualitative",
+      "reference_environment": "selected scenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Counterfactual visualization",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Counterfactual visualization",
+          "origin": "source_reported_endpoint",
+          "status": "P"
+        },
+        {
+          "claim": "Physical response validity",
+          "origin": "reviewer_added_use_question",
+          "status": "P"
+        }
+      ],
+      "source_locators": "Appendix A.7; Figure 12",
+      "interpretation_boundary": "A selected braking example is not a calibrated response distribution.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S07-T01",
+      "study_id": "S07",
+      "task_variant": "Camera-based policy execution",
+      "R": "latent state; decoded BEV",
+      "A": "camera history; policy actions output",
+      "I": "responsive CARLA traffic outside learned transitions",
+      "U": "policy_learning",
+      "V": "reactive_simulation",
+      "reference_environment": "CARLA held-out town and weather",
+      "information_conditions": null,
+      "source_reported_endpoint": "Reactive policy performance",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Reactive policy performance",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Physical-road transfer",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections 4, 5.1, 5.3, 6.2",
+      "interpretation_boundary": "Simulation execution is positive evidence conditional on CARLA.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S08-T01",
+      "study_id": "S08",
+      "task_variant": "Privileged-input policy execution",
+      "R": "latent state and BEV",
+      "A": "privileged scene state; throttle, steer, brake",
+      "I": "responsive CARLA traffic outside learned transitions",
+      "U": "policy_learning",
+      "V": "reactive_simulation",
+      "reference_environment": "CARLA Leaderboard v2",
+      "information_conditions": "Privileged boxes, map and traffic signals",
+      "source_reported_endpoint": "Reactive planning performance",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Reactive planning performance",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Raw-camera deployment from this privileged-input test",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Sections 3.1-3.2, 4.4; Appendix 0.B",
+      "interpretation_boundary": "Planning is isolated using simulator scene information.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S09-T01",
+      "study_id": "S09",
+      "task_variant": "Edited-pose sensor simulation",
+      "R": "camera and lidar",
+      "A": "sensor poses and actor placements",
+      "I": "sensor rendering; behavior external",
+      "U": "sensor_simulation",
+      "V": "sensor_reference",
+      "reference_environment": "recorded driving scenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Sensor realism and downstream domain-gap diagnostics",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Sensor realism and downstream domain-gap diagnostics",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Learned traffic law established by renderer",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Sections 3, 4.3-4.4",
+      "interpretation_boundary": "Renderer and behavior mechanism are separate components.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S09-T02",
+      "study_id": "S09",
+      "task_variant": "Full-autonomy simulation demonstration",
+      "R": "camera and lidar",
+      "A": "autonomy actions and edited actors",
+      "I": "heuristic or human-specified actor trajectories",
+      "U": "hybrid_simulation",
+      "V": "hybrid_execution",
+      "reference_environment": "UniSim full-autonomy setup",
+      "information_conditions": null,
+      "source_reported_endpoint": "Full-autonomy simulation demonstrations",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Full-autonomy simulation demonstrations",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Physical response probability calibration",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Section 4.5; Appendix A1 actor behavior",
+      "interpretation_boundary": "Counterfactual actor motion is external to neural sensor rendering.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S10-T01",
+      "study_id": "S10",
+      "task_variant": "Novel-view and novel-scenario rendering",
+      "R": "camera and lidar",
+      "A": "sensor and actor poses",
+      "I": "rendering of supplied scene trajectories",
+      "U": "sensor_simulation",
+      "V": "sensor_reference",
+      "reference_environment": "five driving datasets",
+      "information_conditions": null,
+      "source_reported_endpoint": "Novel-view sensor quality",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Novel-view sensor quality",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Traffic-response validity from rendering tests",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Sections 3, 4.2-4.3; Appendices F-G",
+      "interpretation_boundary": "Pose and sensor modeling do not constitute a learned traffic policy.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S11-T01",
+      "study_id": "S11",
+      "task_variant": "Generative-image feedback loop",
+      "R": "camera images",
+      "A": "agent trajectories; scene layouts",
+      "I": "external Traffic Manager with World Dreamer",
+      "U": "hybrid_simulation",
+      "V": "hybrid_execution",
+      "reference_environment": "DriveArena",
+      "information_conditions": null,
+      "source_reported_endpoint": "Open-loop and closed-loop agent evaluation",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Open-loop and closed-loop agent evaluation",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Physical ordering of candidate policies",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections 3.1-3.4, 4.5",
+      "interpretation_boundary": "Behavior originates in the external traffic component.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S12-T01",
+      "study_id": "S12",
+      "task_variant": "Perception-free latent supervision",
+      "R": "future visual latents",
+      "A": "current latent and predicted ego trajectory",
+      "I": "auxiliary future-feature prediction",
+      "U": "training_auxiliary",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": "Perception-free framework",
+      "source_reported_endpoint": "Planning benefit of latent supervision",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Planning benefit of latent supervision",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Inference-time search attribution",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Table 4, PDF page 9",
+      "interpretation_boundary": "Visual latents and trajectories are inputs, not two predicted outputs.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S12-T02",
+      "study_id": "S12",
+      "task_variant": "Perception-based latent supervision",
+      "R": "future visual latents",
+      "A": "current latent and predicted ego trajectory",
+      "I": "auxiliary future-feature prediction",
+      "U": "training_auxiliary",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": "Perception-based framework",
+      "source_reported_endpoint": "Planning benefit with perception framework",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Planning benefit with perception framework",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Search attribution from auxiliary ablation",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Table 4, PDF page 9",
+      "interpretation_boundary": "Additional perception supervision changes the input and training setting.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S12-T03",
+      "study_id": "S12",
+      "task_variant": "NAVSIM auxiliary-prediction ablation",
+      "R": "future visual latents",
+      "A": "action-conditioned auxiliary task",
+      "I": "non-reactive environment scoring",
+      "U": "training_auxiliary",
+      "V": "nonreactive_simulation",
+      "reference_environment": "NAVSIM",
+      "information_conditions": null,
+      "source_reported_endpoint": "PDMS with and without latent prediction",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "PDMS with and without latent prediction",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Reactive traffic utility from this NAVSIM test",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Table 5, PDF page 9",
+      "interpretation_boundary": "This is a training ablation, not a runtime candidate-search test.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S12-T04",
+      "study_id": "S12",
+      "task_variant": "CARLA auxiliary-prediction ablation",
+      "R": "future visual latents",
+      "A": "policy trajectories output",
+      "I": "responsive CARLA traffic",
+      "U": "training_auxiliary",
+      "V": "reactive_simulation",
+      "reference_environment": "CARLA Town05 Long",
+      "information_conditions": null,
+      "source_reported_endpoint": "Driving-score ablation",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Driving-score ablation",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Physical-road transfer",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Tables 3, 5",
+      "interpretation_boundary": "Reactive utility is separate from inference-time search.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S13-T01",
+      "study_id": "S13",
+      "task_variant": "Intention-aware selection on logs",
+      "R": "future world latents",
+      "A": "intention-conditioned trajectory candidates",
+      "I": "future latent prediction and learned selector",
+      "U": "online_selection",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "Intention-aware planning",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Intention-aware planning",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Hazardous-outcome cost calibration",
+          "origin": "reviewer_added_use_question",
+          "status": "P"
+        }
+      ],
+      "source_locators": "Sections 3.3.2, 4.3",
+      "interpretation_boundary": "Training labels use actual-future latent distance; inference uses ScoreNet.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S13-T02",
+      "study_id": "S13",
+      "task_variant": "Intention-aware selection in NAVSIM",
+      "R": "future world latents",
+      "A": "intention-conditioned trajectory candidates",
+      "I": "future latent prediction and learned selector",
+      "U": "online_selection",
+      "V": "nonreactive_simulation",
+      "reference_environment": "NAVSIM",
+      "information_conditions": null,
+      "source_reported_endpoint": "Non-reactive planning score",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Non-reactive planning score",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Reactive traffic execution from this NAVSIM test",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Sections 3.3.2, 4.1, 4.3",
+      "interpretation_boundary": "The source closed-loop label does not imply responsive other-agent execution.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S14-T01",
+      "study_id": "S14",
+      "task_variant": "Future-state trajectory evaluator in NAVSIM",
+      "R": "future BEV features",
+      "A": "trajectory candidates",
+      "I": "learned future states with reward evaluation",
+      "U": "online_selection",
+      "V": "nonreactive_simulation",
+      "reference_environment": "NAVSIM",
+      "information_conditions": null,
+      "source_reported_endpoint": "Future-state evaluator ablation",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Future-state evaluator ablation",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Road benefit from this non-reactive ablation",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Section 4.4; Table 3",
+      "interpretation_boundary": "Fix evaluator presence when contrasting future-state inputs.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S14-T02",
+      "study_id": "S14",
+      "task_variant": "Future-state evaluation in CARLA integration",
+      "R": "future BEV features",
+      "A": "trajectory candidates",
+      "I": "responsive CARLA execution",
+      "U": "online_selection",
+      "V": "reactive_simulation",
+      "reference_environment": "CARLA Bench2Drive",
+      "information_conditions": null,
+      "source_reported_endpoint": "Integrated reactive driving utility",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Integrated reactive driving utility",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Physical-road transfer",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections 4.2-4.3; Table 2",
+      "interpretation_boundary": "Integration supports utility; matched-resource attribution remains separate.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S15-T01",
+      "study_id": "S15",
+      "task_variant": "Supervised versus reinforcement fine-tuning",
+      "R": "world latents and planned trajectories",
+      "A": "planning outputs; reinforcement refinement",
+      "I": "policy optimization under logged evaluation",
+      "U": "policy_refinement",
+      "V": "logged",
+      "reference_environment": "nuScenes",
+      "information_conditions": null,
+      "source_reported_endpoint": "SFT/RFT L2 and collision endpoints",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "SFT/RFT L2 and collision endpoints",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Transition-accuracy improvement isolated by this ablation",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Additional Experimental Results; Table 11",
+      "interpretation_boundary": "Equal rounded L2 does not imply equal unrounded errors.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S15-T02",
+      "study_id": "S15",
+      "task_variant": "NAVSIM planning evaluation",
+      "R": "world latents and planned trajectories",
+      "A": "planning outputs",
+      "I": "non-reactive environment scoring",
+      "U": "policy_refinement",
+      "V": "nonreactive_simulation",
+      "reference_environment": "NAVSIM",
+      "information_conditions": null,
+      "source_reported_endpoint": "Non-reactive planning score",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Non-reactive planning score",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Reactive traffic claim from this NAVSIM test",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Experiment; Benchmark and Main Results",
+      "interpretation_boundary": "NAVSIM is not evidence of responding traffic.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S16-T01",
+      "study_id": "S16",
+      "task_variant": "Motion-prediction evaluation",
+      "R": "agent states",
+      "A": "destinations and latent personalities",
+      "I": "multi-agent policies",
+      "U": "traffic_simulation",
+      "V": "logged",
+      "reference_environment": "Waymo Open Motion Dataset",
+      "information_conditions": null,
+      "source_reported_endpoint": "Motion-prediction diagnostics",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Motion-prediction diagnostics",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Physical intervention calibration",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections III-V",
+      "interpretation_boundary": "Prediction surrogate does not label unseen physical alternatives.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S16-T02",
+      "study_id": "S16",
+      "task_variant": "Multi-agent simulation diagnostics",
+      "R": "agent states",
+      "A": "player and bot states; bot conditions",
+      "I": "learned reactive bot policies",
+      "U": "traffic_simulation",
+      "V": "behavior_rollout",
+      "reference_environment": "Waymo-based rollouts",
+      "information_conditions": "Destination/personality conditioning; consult source for rollout mode",
+      "source_reported_endpoint": "Behavior and rollout diagnostics",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Behavior and rollout diagnostics",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Physical response distribution calibration",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections III-V; Appendix F",
+      "interpretation_boundary": "A priori and posterior settings must retain their future-information conditions.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S17-T01",
+      "study_id": "S17",
+      "task_variant": "Constrained scene initialization",
+      "R": "agent layouts",
+      "A": "global context and hard constraints",
+      "I": "scene-level diffusion",
+      "U": "scene_initialization",
+      "V": "logged",
+      "reference_environment": "Waymo-based scene generation",
+      "information_conditions": null,
+      "source_reported_endpoint": "Scene-generation and constraint diagnostics",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Scene-generation and constraint diagnostics",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Ego-intervention response inferred from initialization",
+          "origin": "reviewer_added_use_question",
+          "status": "X"
+        }
+      ],
+      "source_locators": "Sections 3.3-3.4, 4.2",
+      "interpretation_boundary": "Initialization constraints do not by themselves test policy response.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    },
+    {
+      "record_id": "S17-T02",
+      "study_id": "S17",
+      "task_variant": "Amortized scene rollout",
+      "R": "agent states",
+      "A": "history, context and logged validity mask",
+      "I": "unified AV and agent rollout",
+      "U": "traffic_simulation",
+      "V": "behavior_rollout",
+      "reference_environment": "WOSAC-style evaluation",
+      "information_conditions": "Logged future validity mask is supplied",
+      "source_reported_endpoint": "Traffic-rollout diagnostics",
+      "source_endpoint_wording": "Paraphrase; not a quotation",
+      "assessments": [
+        {
+          "claim": "Traffic-rollout diagnostics",
+          "origin": "source_reported_endpoint",
+          "status": "D"
+        },
+        {
+          "claim": "Independent ego-intervention response calibration",
+          "origin": "reviewer_added_use_question",
+          "status": "NR"
+        }
+      ],
+      "source_locators": "Sections 3.2, 4.1; Appendix A.3; Limitations",
+      "interpretation_boundary": "Logged validity and unified AV/agent update qualify intervention inference.",
+      "experimental_quality": {
+        "independent_second_coder": false,
+        "extracted_scenario_count": null,
+        "uncertainty_summary": "Not extracted in this targeted register; consult the source",
+        "independent_physical_intervention_outcomes_available_in_package": false
+      },
+      "provenance": {
+        "created": "2026-11-02",
+        "construction": "Revision 4 reconstruction plus targeted primary-source checking",
+        "original_historical_extraction_log_available": false
+      }
+    }
+  ]
+}

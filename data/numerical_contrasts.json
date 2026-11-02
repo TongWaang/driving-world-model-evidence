@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "contrasts": [
+    {
+      "contrast_id": "C01",
+      "study_id": "S05",
+      "source_url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02024.pdf",
+      "version": "ECCV 2024 proceedings PDF",
+      "locator": "Table 3, PDF page 13",
+      "baseline_condition": "(50^2, 128, 512) tokenizer",
+      "comparison_condition": "(100^2, 128, 512) tokenizer",
+      "dataset": "nuScenes; oracle 3D occupancy; OccWorld-O",
+      "aggregation": "Forecast mIoU and L2 averaged over 1s, 2s, 3s",
+      "metrics": [
+        {
+          "metric": "reconstruction_mIoU",
+          "unit": "percent",
+          "baseline": 66.38,
+          "comparison": 78.12,
+          "preferred_direction": "higher",
+          "source_cells": [
+            "Reconstruction mIoU, row (50^2,128,512)",
+            "Reconstruction mIoU, row (100^2,128,512)"
+          ]
+        },
+        {
+          "metric": "forecast_mIoU",
+          "unit": "percent",
+          "baseline": 17.14,
+          "comparison": 12.38,
+          "preferred_direction": "higher",
+          "source_cells": [
+            "Forecasting Avg., row (50^2,128,512)",
+            "Forecasting Avg., row (100^2,128,512)"
+          ]
+        },
+        {
+          "metric": "planning_L2",
+          "unit": "m",
+          "baseline": 1.17,
+          "comparison": 1.36,
+          "preferred_direction": "lower",
+          "source_cells": [
+            "Planning Avg., row (50^2,128,512)",
+            "Planning Avg., row (100^2,128,512)"
+          ]
+        }
+      ],
+      "boundary": "Tokenizer resolution, token count and compute change together; no universal causal claim.",
+      "checked_date": "2026-11-02",
+      "verification_method": "Manual primary-source table inspection; program checks internal consistency only",
+      "confidence_interval": null,
+      "raw_observations_available_in_package": false
+    },
+    {
+      "contrast_id": "C02",
+      "study_id": "S12",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/6aa4967920e495e90aeeaa3acf18d019-Paper-Conference.pdf",
+      "version": "ICLR 2025 proceedings PDF",
+      "locator": "Table 4, PDF page 9",
+      "baseline_condition": "Perception-free; no latent prediction",
+      "comparison_condition": "Perception-free; visual latent and predicted trajectory supplied to latent predictor",
+      "dataset": "nuScenes",
+      "aggregation": "Avg. columns over 1s, 2s, 3s",
+      "metrics": [
+        {
+          "metric": "planning_L2",
+          "unit": "m",
+          "baseline": 0.71,
+          "comparison": 0.61,
+          "preferred_direction": "lower",
+          "source_cells": [
+            "Perception-free, --/--, L2 Avg.",
+            "Perception-free, check/check, L2 Avg."
+          ]
+        },
+        {
+          "metric": "logged_collision",
+          "unit": "percent",
+          "baseline": 0.41,
+          "comparison": 0.3,
+          "preferred_direction": "lower",
+          "source_cells": [
+            "Perception-free, --/--, Collision Avg.",
+            "Perception-free, check/check, Collision Avg."
+          ]
+        }
+      ],
+      "boundary": "Visual latents and predicted trajectory are model inputs. This is auxiliary supervision, not runtime search.",
+      "checked_date": "2026-11-02",
+      "verification_method": "Manual primary-source table inspection; program checks internal consistency only",
+      "confidence_interval": null,
+      "raw_observations_available_in_package": false
+    },
+    {
+      "contrast_id": "C03",
+      "study_id": "S14",
+      "source_url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_End-to-End_Driving_with_Online_Trajectory_Evaluation_via_BEV_World_Model_ICCV_2025_paper.pdf",
+      "version": "ICCV 2025 proceedings; cross-checked against arXiv:2504.01941",
+      "locator": "Table 3",
+      "baseline_condition": "Trajectory evaluator present; future states absent",
+      "comparison_condition": "Trajectory evaluator present; future states present",
+      "dataset": "NAVSIM",
+      "aggregation": "Author-reported PDMS; no reconstructed sampling interval",
+      "metrics": [
+        {
+          "metric": "PDMS",
+          "unit": "score_points",
+          "baseline": 83.2,
+          "comparison": 85.6,
+          "preferred_direction": "higher",
+          "source_cells": [
+            "Traj.Eval. check, Future States cross, PDMS",
+            "Traj.Eval. check, Future States check, PDMS"
+          ]
+        }
+      ],
+      "boundary": "Non-reactive ablation; does not isolate road effects or every training/compute change.",
+      "checked_date": "2026-11-02",
+      "verification_method": "Manual primary-source table inspection; program checks internal consistency only",
+      "confidence_interval": null,
+      "raw_observations_available_in_package": false
+    },
+    {
+      "contrast_id": "C04",
+      "study_id": "S15",
+      "source_url": "https://arxiv.org/html/2512.19133v1",
+      "version": "arXiv:2512.19133v1 including supplementary tables",
+      "locator": "Additional Experimental Results, Table 11",
+      "baseline_condition": "Supervised fine-tuning (SFT)",
+      "comparison_condition": "Reinforcement fine-tuning (RFT)",
+      "dataset": "nuScenes",
+      "aggregation": "Source Table 11 reported aggregate, rounded to two decimals",
+      "metrics": [
+        {
+          "metric": "planning_L2",
+          "unit": "m",
+          "baseline": 0.48,
+          "comparison": 0.48,
+          "preferred_direction": "lower",
+          "source_cells": [
+            "SFT, L2",
+            "RFT, L2"
+          ]
+        },
+        {
+          "metric": "logged_collision",
+          "unit": "percent",
+          "baseline": 0.1,
+          "comparison": 0.05,
+          "preferred_direction": "lower",
+          "source_cells": [
+            "SFT, Collision",
+            "RFT, Collision"
+          ]
+        }
+      ],
+      "boundary": "Equal rounded L2 is not proof of equal unrounded error. Policy optimization is not transition-accuracy isolation.",
+      "checked_date": "2026-11-02",
+      "verification_method": "Manual primary-source table inspection; program checks internal consistency only",
+      "confidence_interval": null,
+      "raw_observations_available_in_package": false
+    }
+  ]
+}
