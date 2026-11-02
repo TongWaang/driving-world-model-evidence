@@ -1,0 +1,205 @@
+{
+  "package_version": "1.0.0",
+  "status": "PASS",
+  "counts": {
+    "core_studies": 17,
+    "task_input_records": 35,
+    "contrasts": 4,
+    "transcribed_metric_pairs": 8
+  },
+  "source_table_check": "Manual source checks are recorded; this script does not automatically establish primary-source truth.",
+  "checks": {
+    "schema_and_cross_links": "PASS",
+    "analytical_example": "PASS",
+    "boundary_tests": "PASS"
+  },
+  "test_count": 19,
+  "analytical_example": {
+    "reference_costs": [
+      4.0,
+      1.2,
+      3.0
+    ],
+    "models": {
+      "A": {
+        "observation_error": 0.0149,
+        "selected_action": "keep_speed",
+        "regret": 2.8,
+        "ranking_error": 0.6666666666666666,
+        "hazardous_false_clearance": 1.0,
+        "uniform_cost_error": 3.5,
+        "regret_bound": 7.0,
+        "predicted_collision_probabilities": [
+          0.005,
+          0.0019999999999999996,
+          0.01
+        ],
+        "ranking_details": {
+          "score": 0.6666666666666666,
+          "error_count": 2.0,
+          "eligible_pairs": 3,
+          "total_pairs": 3,
+          "pair_coverage": 1.0
+        },
+        "hazard_details": {
+          "score": 1.0,
+          "missed_hazards": 1,
+          "resolved_hazardous": 1,
+          "resolved_nonhazardous": 2,
+          "unresolved": 0,
+          "resolved_coverage": 1.0,
+          "clearance_rate": 1.0
+        },
+        "exact_reference_regret_interval": [
+          2.8,
+          2.8
+        ]
+      },
+      "B": {
+        "observation_error": 0.030199999999999998,
+        "selected_action": "brake",
+        "regret": 0.0,
+        "ranking_error": 0.0,
+        "hazardous_false_clearance": 0.0,
+        "uniform_cost_error": 0.5,
+        "regret_bound": 1.0,
+        "predicted_collision_probabilities": [
+          0.045,
+          0.0030000000000000005,
+          0.012000000000000002
+        ],
+        "ranking_details": {
+          "score": 0.0,
+          "error_count": 0.0,
+          "eligible_pairs": 3,
+          "total_pairs": 3,
+          "pair_coverage": 1.0
+        },
+        "hazard_details": {
+          "score": 0.0,
+          "missed_hazards": 0,
+          "resolved_hazardous": 1,
+          "resolved_nonhazardous": 2,
+          "unresolved": 0,
+          "resolved_coverage": 1.0,
+          "clearance_rate": 0.6666666666666666
+        },
+        "exact_reference_regret_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "numerical_changes": [
+    {
+      "contrast_id": "C01",
+      "metric": "reconstruction_mIoU",
+      "unit": "percent",
+      "baseline": 66.38,
+      "comparison": 78.12,
+      "absolute_change": 11.74,
+      "relative_change_percent": 17.6860500151,
+      "change_unit": "percentage_points"
+    },
+    {
+      "contrast_id": "C01",
+      "metric": "forecast_mIoU",
+      "unit": "percent",
+      "baseline": 17.14,
+      "comparison": 12.38,
+      "absolute_change": -4.76,
+      "relative_change_percent": -27.7712952159,
+      "change_unit": "percentage_points"
+    },
+    {
+      "contrast_id": "C01",
+      "metric": "planning_L2",
+      "unit": "m",
+      "baseline": 1.17,
+      "comparison": 1.36,
+      "absolute_change": 0.19,
+      "relative_change_percent": 16.2393162393,
+      "change_unit": "m"
+    },
+    {
+      "contrast_id": "C02",
+      "metric": "planning_L2",
+      "unit": "m",
+      "baseline": 0.71,
+      "comparison": 0.61,
+      "absolute_change": -0.1,
+      "relative_change_percent": -14.0845070423,
+      "change_unit": "m"
+    },
+    {
+      "contrast_id": "C02",
+      "metric": "logged_collision",
+      "unit": "percent",
+      "baseline": 0.41,
+      "comparison": 0.3,
+      "absolute_change": -0.11,
+      "relative_change_percent": -26.8292682927,
+      "change_unit": "percentage_points"
+    },
+    {
+      "contrast_id": "C03",
+      "metric": "PDMS",
+      "unit": "score_points",
+      "baseline": 83.2,
+      "comparison": 85.6,
+      "absolute_change": 2.4,
+      "relative_change_percent": 2.8846153846,
+      "change_unit": "score_points"
+    },
+    {
+      "contrast_id": "C04",
+      "metric": "planning_L2",
+      "unit": "m",
+      "baseline": 0.48,
+      "comparison": 0.48,
+      "absolute_change": 0.0,
+      "relative_change_percent": 0.0,
+      "change_unit": "m"
+    },
+    {
+      "contrast_id": "C04",
+      "metric": "logged_collision",
+      "unit": "percent",
+      "baseline": 0.1,
+      "comparison": 0.05,
+      "absolute_change": -0.05,
+      "relative_change_percent": -50.0,
+      "change_unit": "percentage_points"
+    }
+  ],
+  "illustrative_boundary_cases": {
+    "no_hazard_denominator": {
+      "score": null,
+      "missed_hazards": 0,
+      "resolved_hazardous": 0,
+      "resolved_nonhazardous": 1,
+      "unresolved": 1,
+      "resolved_coverage": 0.5,
+      "clearance_rate": 1.0
+    },
+    "unresolved_practical_order": {
+      "score": null,
+      "error_count": 0.0,
+      "eligible_pairs": 0,
+      "total_pairs": 1,
+      "pair_coverage": 0.0
+    },
+    "interval_regret": [
+      1,
+      4
+    ],
+    "empty_selective_set": {
+      "threshold": 0.9,
+      "retained": 0,
+      "coverage": 0.0,
+      "risk": null
+    }
+  },
+  "scope": "Arithmetic, structure and implementation definitions only; no model-training or driving-outcome replication."
+}
