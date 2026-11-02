@@ -37,7 +37,7 @@ The unit is study x task/input variant x specified claim. The five axes below de
 | Field | Meaning |
 | --- | --- |
 '''
-    lines=[intro]
+    lines=[intro.rstrip()]
     for k,v in codebook['axes'].items():
         lines.append(f'| {k} | {v} |')
     lines.extend(['','| Status | Claim-specific meaning |','| --- | --- |'])
