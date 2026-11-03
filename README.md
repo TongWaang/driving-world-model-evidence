@@ -7,6 +7,23 @@ Supplementary materials for **A Critical Review of Evaluation Evidence for Auton
 Version 1.0.0 - prepared 2 November 2026. **17 systems, 35 task/input records, four within-study contrasts and eight transcribed metric pairs.**
 
 This release reconstructs the supplement described in Revision 4 from the manuscript and targeted primary-source checking. 
+
+## Connected-driving revision (Deep Revised, 3 November 2026)
+
+The manuscript has since been revised and retitled **World Models for Connected Driving through Distributed Prediction and Evidence Assessment**. This repository now additionally hosts the code and data for that revision's numerical material:
+
+- [`scripts/numerical_illustration.py`](scripts/numerical_illustration.py) — standalone, dependency-free executable for Equation (2) (temporal-support acceptance) and Equation (3) (deadline-aware value of information), matching manuscript Section 7.5.
+- [`reports/numerical_illustration_results.txt`](reports/numerical_illustration_results.txt) — the exact console output produced by the script.
+- [`data/core_evidence_audit.csv`](data/core_evidence_audit.csv) — the four-system targeted audit of Appendix A / Table 4 (World4V2X, V2X-WAM, offline MARL, OmniV2X).
+
+Run it with:
+
+```bash
+python scripts/numerical_illustration.py
+```
+
+The sections below remain the v1.0.0 evidence package for the earlier *critical review* revision (17 systems). The new files are additive: `SHA256SUMS` and the `v1.0.0` archive cover only the earlier release files.
+
 ## Browse by system
 
 | ID | System | Main distinction |
