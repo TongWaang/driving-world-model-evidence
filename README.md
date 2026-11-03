@@ -6,8 +6,7 @@ Supplementary materials for **A Critical Review of Evaluation Evidence for Auton
 
 Version 1.0.0 - prepared 2 November 2026. **17 systems, 35 task/input records, four within-study contrasts and eight transcribed metric pairs.**
 
-This release reconstructs the supplement described in Revision 4 from the manuscript and targeted primary-source checking. It is a newly assembled
-
+This release reconstructs the supplement described in Revision 4 from the manuscript and targeted primary-source checking. 
 ## Browse by system
 
 | ID | System | Main distinction |
